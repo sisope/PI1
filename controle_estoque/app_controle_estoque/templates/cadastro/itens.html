@@ -1,0 +1,22 @@
+{% extends 'cadastro/base.html' %}
+{% block conteudo %}
+    
+<div class="container">
+    <h1>Itens Cadastrados:</h1>
+    <table class="table table-bordered table-striped">
+        <tr>
+            <th>Identificação</th>
+            <th>Nome</th>
+            <th>Quantidade</th>
+        </tr>
+        {% for item in itens %}
+        <tr>
+            <td>{{item.id_item}}</td>
+            <td>{{item.nome}}</td>
+            <td>{{item.quantidade}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</div>
+{% endblock %}
